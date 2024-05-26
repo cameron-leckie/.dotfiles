@@ -102,7 +102,6 @@
       wget
       zip
       vpnc # For strath vpn
-      libsForQt5.krdc # Remote desktop
 
       #########################
       ### Basic development ###
@@ -179,17 +178,6 @@
   # Power management packages
   powerManagement.enable = true; # Allows nixos to control hibernate and suspend
   services.thermald.enable = true; # Controls CPU thermal - good for intel?
-  services.auto-cpufreq.enable = true; # Not working correctly
-  services.auto-cpufreq.settings = {
-    battery = {
-       governor = "powersave";
-       turbo = "never";
-    };
-    charger = {
-      governor = "performance";
-      turbo = "auto";
-    };
-  };
 
 
 
