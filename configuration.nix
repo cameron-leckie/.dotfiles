@@ -157,7 +157,7 @@
 
   # List services that you want to enable:
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  programs.hyperland.enable = true;
+  # programs.hyperland.enable = true; doesn't work with flakes
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
