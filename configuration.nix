@@ -92,7 +92,6 @@
       ####################
       ### Text editors ###
       ####################
-      vim
       neovim
       # zed-editor
 
