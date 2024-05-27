@@ -21,7 +21,7 @@
       };
     };
     homConfigurations = {
-      CL-FW13 = home-manager.lib.homeManagerConfiguration {
+      cameron = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home.nix ]; 
       };
