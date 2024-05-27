@@ -20,7 +20,7 @@
         modules = [ ./configuration.nix ]; 
       };
     };
-    homConfigurations = {
+    homeConfigurations = {
       cameron = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home.nix ]; 
