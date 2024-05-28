@@ -19,15 +19,22 @@
   # environment.
   home.packages = [
     
-    ##########################
-    ### General Untilities ###
-    ##########################
+    #########################
+    ### Basic Development ###
+    #########################
+    pkgs.python311
+    pkgs.gnuplot
+    # pkgs.g3data
+    # pkgs.zed-editor # waiting for stable release
+
+    ##################
+    ### Networking ###
+    ##################
     pkgs.vpnc # For strath vpn
-
-
-
-
-
+    
+    #################
+    ### Aesthetic ###
+    #################
     pkgs.fastfetch
     
     # Adds the 'hello' command to your environment. It prints a friendly
