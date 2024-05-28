@@ -23,16 +23,16 @@
     ### Office ###
     ##############
     libreoffice
-    # pkgs.obsidian
-    # pkgs.zoom-us
+    # obsidian
+    # zoom-us
 
     #########################
     ### Basic Development ###
     #########################
     python311
     gnuplot
-    # pkgs.g3data
-    # pkgs.zed-editor # waiting for stable release
+    # g3data
+    # zed-editor # waiting for stable release
 
     ##################
     ### Networking ###
