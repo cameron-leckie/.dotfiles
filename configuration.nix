@@ -97,7 +97,6 @@
       ##########################
       ### General  utilities ###
       ##########################
-      wget
       zip
       vpnc # For strath vpn
 
