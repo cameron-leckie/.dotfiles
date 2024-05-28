@@ -85,7 +85,11 @@
       enable = true;
       userEmail = "cdl.public@proton.me";
       userName = "cameron-leckie";
-    }; 
+    };
+
+    neovim = {
+      enable = true;
+    };
   };
 
   wayland.windowManager.hyprland = {
