@@ -83,6 +83,8 @@
 
     git = {
       enable = true;
+      userEmail = "cdl.public@proton.me";
+      userName = "cameron-leckie";
     }; 
   };
 
