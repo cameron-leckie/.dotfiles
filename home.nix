@@ -76,9 +76,9 @@
 
     bash = {
       enable = true;
-      shellAliases = {
-        
-      };
+      shellAliases = {};
+      initExtra = "fastfetch";
+
     };
 
     git = {
