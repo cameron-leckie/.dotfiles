@@ -89,22 +89,9 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
   
-      ####################
-      ### Text editors ###
-      ####################
-      # zed-editor
-   
-      #########################
-      ### Basic development ###
-      #########################
-      # g3data
-      gnuplot
-      python311
-
       ##############
       ### Office ###
       ##############
-      onlyoffice-bin
       libreoffice
       obsidian
       zoom-us
