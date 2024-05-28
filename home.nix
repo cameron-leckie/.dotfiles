@@ -22,7 +22,7 @@
     ##########################
     ### General Untilities ###
     ##########################
-    # vpnc # For strath vpn
+    pkgs.vpnc # For strath vpn
 
 
 

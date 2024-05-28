@@ -93,13 +93,7 @@
       ### Text editors ###
       ####################
       # zed-editor
-
-      ##########################
-      ### General  utilities ###
-      ##########################
-      zip
-      vpnc # For strath vpn
-
+   
       #########################
       ### Basic development ###
       #########################
@@ -140,6 +134,7 @@
     thunderbird
     git
     wget
+    zip
   ];
   
   nixpkgs.config.permittedInsecurePackages = [
