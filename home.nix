@@ -67,11 +67,17 @@
   };
 
   # Start Config here
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      vi = "nvim";
+  programs = {
+    # Let Home Manager isntall and manage itself
+    home-manager.enable = true;
+
+    bash = {
+      enable = true;
+      shellAliases = {
+        
+      };
     };
+    
   };
 
   wayland.windowManager.hyprland = {
@@ -80,8 +86,4 @@
       
     };
   };
-
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
