@@ -18,14 +18,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    
-    ##############
-    ### Office ###
-    ##############
-    libreoffice
-    # obsidian
-    # zoom-us
-
     #########################
     ### Basic Development ###
     #########################
@@ -96,7 +88,9 @@
   # Start Config here
   programs = {
     # Let Home Manager isntall and manage itself
-    home-manager.enable = true;
+    home-manager = {
+      enable = true;
+    };
 
     bash = {
       enable = true;

@@ -88,14 +88,17 @@
     description = "Cameron Leckie";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-  
+      
+      ##############
+      ### Unfree ###
+      ##############
+      # Can't be installed with home-manager
+
       ##############
       ### Office ###
       ##############
-      libreoffice
       obsidian
       zoom-us
-      thunderbird
       teams-for-linux
       libsForQt5.kruler
       zotero
@@ -109,7 +112,8 @@
   };
 
   programs = { 
-    firefox.enable = true;
+  # can enable programs
+  # firefox.enable = true;
   };
 
   # Allow unfree packages
@@ -118,7 +122,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    
+    # Essentials
+    firefox
     thunderbird
+    libreoffice
     git
     wget
     zip
