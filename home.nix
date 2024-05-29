@@ -119,9 +119,10 @@
       enable = true;
     };
 
-    thunderbird = {
-      enable = true;
-    };
+    # thunderbird = {
+    #   enable = true;
+    #   profiles = "cameron";
+    # };
   };
 
   wayland.windowManager.hyprland = {
