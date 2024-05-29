@@ -100,8 +100,6 @@
       obsidian
       zoom-us
       teams-for-linux
-      libsForQt5.kruler
-      zotero
 
       ################
       ### Personal ###

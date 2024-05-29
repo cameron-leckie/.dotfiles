@@ -36,6 +36,12 @@
     #################
     fastfetch
     
+    ##############
+    ### Office ###
+    ##############
+    zotero
+    libsForQt5.kruler
+
     # Adds the 'hello' command to your environment. It prints a friendly
     # "Hello, world!" when run.
     hello
@@ -106,6 +112,14 @@
     };
 
     neovim = {
+      enable = true;
+    };
+
+    firefox = {
+      enable = true;
+    };
+
+    thunderbird = {
       enable = true;
     };
   };
