@@ -42,6 +42,11 @@
     zotero
     libsForQt5.kruler
 
+    #############
+    ### Games ###
+    #############
+    libsForQt5.kmines
+
     # Adds the 'hello' command to your environment. It prints a friendly
     # "Hello, world!" when run.
     hello
