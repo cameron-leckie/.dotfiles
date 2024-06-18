@@ -53,9 +53,9 @@
 
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "gb";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Configure console keymap
@@ -130,6 +130,7 @@
     git
     wget
     zip
+    fprintd # fingerprint module
   ];
   
   nixpkgs.config.permittedInsecurePackages = [
@@ -163,6 +164,13 @@
     ];
   };
   
+  # Fingerprint settings 
+
+  services.fprintd = {
+    enable = true;
+    tod.enable = true;
+    tod.driver = pkgs.libfprint-2-tod1-vfs0090;
+  };
 
   # Power management packages
   powerManagement.enable = true; # Allows nixos to control hibernate and suspend
