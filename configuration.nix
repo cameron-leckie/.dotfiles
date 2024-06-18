@@ -130,7 +130,6 @@
     git
     wget
     zip
-    fprintd # fingerprint module
   ];
   
   nixpkgs.config.permittedInsecurePackages = [
@@ -164,19 +163,6 @@
     ];
   };
   
-  # Fingerprint settings 
-
-  services.fprintd = {
-    enable = true;
-    tod.enable = true;
-    tod.driver = pkgs.libfprint-2-tod1-vfs0090;
-  };
-
-  # Power management packages
-  powerManagement.enable = true; # Allows nixos to control hibernate and suspend
-  services.thermald.enable = true; # Controls CPU thermal - good for intel?
-
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
