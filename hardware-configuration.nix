@@ -39,14 +39,6 @@
   # Firmwear updater
   services.fwupd.enable = true;
   
-  # Fingerprint reader
-  environment.systemPackages = with pkgs; [ fprintd ]; # fingerprint module
-  services.fprintd = {
-    enable = true;
-    tod.enable = true;
-    tod.driver = pkgs.libfprint-2-tod1-goodix;
-  };
-
   # Power management packages
   powerManagement.enable = true; # Allows nixos to control hibernate and suspend
   services.thermald.enable = true; # Controls CPU thermal - good for intel?
