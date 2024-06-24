@@ -129,11 +129,4 @@
     #   profiles = "cameron";
     # };
   };
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-    settings = {
-      
-    };
-  };
 }
