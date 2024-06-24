@@ -26,6 +26,7 @@
     python311Packages.scipy
     python311Packages.pandas
     gnuplot
+    entr
     # g3data
     # zed-editor # waiting for stable release
 
@@ -108,7 +109,12 @@
 
     bash = {
       enable = true;
-      shellAliases = {};
+      shellAliases = { 
+        ls = "eza";
+	cat = "bat -P";
+	cd = "z";
+        grep = "rg";      
+      };
       initExtra = "fastfetch";
 
     };
@@ -128,6 +134,22 @@
     };
 
     fzf = {
+      enable = true;
+    };
+    
+    eza = {
+      enable = true;
+    };
+    
+    ripgrep = {
+      enable = true;
+    };
+
+    bat = {
+      enable = true;
+    };
+    
+    zoxide = {
       enable = true;
     };
   };
