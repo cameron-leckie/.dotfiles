@@ -22,6 +22,9 @@
     ### Basic Development ###
     #########################
     python311
+    python311Packages.numpy
+    python311Packages.scipy
+    python311Packages.pandas
     gnuplot
     # g3data
     # zed-editor # waiting for stable release
