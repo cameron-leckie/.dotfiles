@@ -124,9 +124,8 @@
       enable = true;
     };
 
-    # thunderbird = {
-    #   enable = true;
-    #   profiles = "cameron";
-    # };
+    fzf = {
+      enable = true;
+    };
   };
 }
