@@ -112,7 +112,9 @@
       shellAliases = { 
 	cat = "bat";
 	cd = "z";
-        grep = "rg";      
+        grep = "rg";
+	tar = "tar -cf";
+	untar = "tar -xf";
       };
       initExtra = "fastfetch";
 

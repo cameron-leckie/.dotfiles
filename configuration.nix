@@ -130,6 +130,7 @@
     git
     wget
     zip
+    unzip
   ];
   
   nixpkgs.config.permittedInsecurePackages = [
