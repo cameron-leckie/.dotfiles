@@ -110,8 +110,7 @@
     bash = {
       enable = true;
       shellAliases = { 
-        ls = "eza";
-	cat = "bat -P";
+	cat = "bat";
 	cd = "z";
         grep = "rg";      
       };
@@ -147,6 +146,9 @@
 
     bat = {
       enable = true;
+       config = {
+         pager = "never";
+       };
     };
     
     zoxide = {
