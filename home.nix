@@ -115,6 +115,7 @@
         grep = "rg";
 	tar = "tar -cf";
 	untar = "tar -xf";
+        vi = "nvim";
       };
       initExtra = "fastfetch";
 
