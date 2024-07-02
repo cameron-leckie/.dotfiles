@@ -116,8 +116,12 @@
   # firefox.enable = true;
   };
 
-  # Allow unfree packages
+  # Allow unfree, unsupported and insecure packages
   nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnsupportedSystem = true;
+  nixpkgs.config.permittedInsecurePackages = [
+                "electron-25.9.0" # Required for obsidian
+              ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -132,11 +136,6 @@
     zip
     unzip
   ];
-  
-  nixpkgs.config.permittedInsecurePackages = [
-                "electron-25.9.0" # Required for obsidian
-              ];
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
