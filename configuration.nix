@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "CL-FW13"; # Define your hostname.
+  networking.hostName = "CL-Elitebook"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -99,7 +99,6 @@
       ##############
       ### Office ###
       ##############
-      obsidian
       zoom-us
       teams-for-linux
 
@@ -119,9 +118,7 @@
   # Allow unfree, unsupported and insecure packages
   nixpkgs.config.allowUnfree = true;
   # nixpkgs.config.allowUnsupportedSystem = true;
-  nixpkgs.config.permittedInsecurePackages = [
-                "electron-25.9.0" # Required for obsidian
-              ];
+  # nixpkgs.config.permittedInsecurePackages = [];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -135,6 +132,7 @@
     wget
     zip
     unzip
+    neovim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
