@@ -15,7 +15,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
+      CL-FW13  = lib.nixosSystem {
         inherit system;
         modules = [ ./configuration.nix ]; 
       };
