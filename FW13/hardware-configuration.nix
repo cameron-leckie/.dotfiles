@@ -14,17 +14,19 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/976e56aa-113a-47bc-9ba7-40d38977bd3f";
+    { device = "/dev/disk/by-uuid/43b3c4f9-1caa-4d5c-9231-e352d10e64b2";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/B818-7B40";
+    { device = "/dev/disk/by-uuid/DF2D-9BA6";
       fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  swapDevices = [ ];
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/63960104-eb3b-475f-b27e-aab92287557d"; }
+    ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
@@ -35,11 +37,4 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  # Firmwear updater
-  services.fwupd.enable = true;
-  
-  # Power management packages
-  powerManagement.enable = true; # Allows nixos to control hibernate and suspend
-  services.thermald.enable = true; # Controls CPU thermal - good for intel?
 }
