@@ -116,6 +116,7 @@
 
 	# nonNixPrograms
         matlab = "nix-shell /home/cameron/nonNixBin/matlab/matlab.nix";
+        thinlinc = "nix-shell /home/cameron/nonNixBin/thinlinc/thinlinc.nix";
 
 	# ssh shortuts
 	wildebeest = "ssh jjb20148@wildebeest.phys.strath.ac.uk";
