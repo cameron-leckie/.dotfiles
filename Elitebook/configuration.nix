@@ -134,6 +134,9 @@
     unzip
     neovim
     syncthing
+    python312
+    python312Packages.numpy
+    python312Packages.scipy
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
