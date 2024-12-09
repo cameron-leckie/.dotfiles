@@ -21,10 +21,7 @@
     #########################
     ### Basic Development ###
     #########################
-    python311
-    python311Packages.numpy
-    python311Packages.scipy
-    python311Packages.pandas
+
     gnuplot
     entr
     # g3data
@@ -115,11 +112,11 @@
         grep = "rg";
 
 	# nonNixPrograms
-        matlab = "nix-shell /home/cameron/nonNixBin/matlab/matlab.nix";
+        matlab = "nix-shell /home/cameron/nonNixBin/matlab-symbolicMathToolbox/matlab.nix";
         thinlinc = "nix-shell /home/cameron/nonNixBin/thinlinc/thinlinc.nix";
 
 	# ssh shortuts
-	wildebeest = "ssh jjb20148@wildebeest.phys.strath.ac.uk";
+	wildebeest = "ssh -Y jjb20148@wildebeest.phys.strath.ac.uk";
 	tcad = "ssh tcad@130.159.216.57";
       };
       initExtra = "fastfetch";

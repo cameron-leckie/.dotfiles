@@ -126,14 +126,19 @@
     
     # Essentials
     firefox
-    thunderbird
     libreoffice
     git
     wget
     zip
     unzip
     neovim
+    vim
     syncthing
+    python312
+    python312Packages.numpy
+    python312Packages.scipy
+    python312Packages.matplotlib
+    python312Packages.sympy
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -146,7 +151,6 @@
 
   # List services that you want to enable:
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  programs.hyprland.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -174,5 +178,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "23.11"; # Did you read the comment?
 }
