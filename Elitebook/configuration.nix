@@ -134,10 +134,6 @@
     vim
     syncthing
     python312
-    python312Packages.numpy
-    python312Packages.scipy
-    python312Packages.matplotlib
-    python312Packages.sympy
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -110,6 +110,7 @@
 	cat = "bat";
 	cd = "z";
         grep = "rg";
+	python = "nix-shell -p python312 python312Packages.numpy python312Packages.scipy python312Packages.matplotlib python312Packages.sympy python312Packages.pandas --command python";
 
 	# nonNixPrograms
         matlab = "nix-shell /home/cameron/nonNixBin/matlab-symbolicMathToolbox/matlab.nix";
@@ -117,7 +118,7 @@
 
 	# ssh shortuts
 	wildebeest = "ssh -Y jjb20148@wildebeest.phys.strath.ac.uk";
-	tcad = "ssh tcad@130.159.216.57";
+	tcad = "ssh -Y tcad@130.159.216.57";
       };
       initExtra = "fastfetch";
 
