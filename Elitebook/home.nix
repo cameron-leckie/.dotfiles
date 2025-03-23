@@ -110,7 +110,7 @@
 	cat = "bat";
 	cd = "z";
         grep = "rg";
-	python = "nix-shell -p python312 python312Packages.numpy python312Packages.scipy python312Packages.matplotlib python312Packages.sympy python312Packages.pandas --command python";
+	PYTHON = "nix-shell -p python312 python312Packages.numpy python312Packages.scipy python312Packages.matplotlib python312Packages.sympy python312Packages.pandas --command \"python\"";
 
 	# nonNixPrograms
         matlab = "nix-shell /home/cameron/nonNixBin/matlab-symbolicMathToolbox/matlab.nix";
