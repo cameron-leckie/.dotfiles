@@ -130,35 +130,17 @@
       userName = "cameron-leckie";
     };
 
-    neovim = {
-      enable = true;
-    };
+    neovim = { enable = true; };
+    vim = { enable = true; };
+    firefox = { enable = true; };
+    fzf = { enable = true; };
+    eza = { enable = true; };
+    ripgrep = { enable = true; };
+    zoxide = { enable = true; };
 
-    firefox = {
+    bat = { 
       enable = true;
-    };
-
-    fzf = {
-      enable = true;
-    };
-    
-    eza = {
-      enable = true;
-    };
-    
-    ripgrep = {
-      enable = true;
-    };
-
-    bat = {
-      enable = true;
-       config = {
-         pager = "never";
-       };
-    };
-    
-    zoxide = {
-      enable = true;
+      config = { pager = "never"; };
     };
   };
 }
