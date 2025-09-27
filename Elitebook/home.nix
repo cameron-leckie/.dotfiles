@@ -24,7 +24,8 @@
 
     gnuplot
     entr
-    # g3data
+    gcc12
+    engauge-digitizer
     # zed-editor # waiting for stable release
 
     ##################
@@ -56,7 +57,7 @@
     # overrides. You can do that directly here, just don't forget the
     # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # fonts?
-    (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    #(nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # You can also create simple shell scripts directly inside your
     # configuration. For example, this adds a command 'my-hello' to your
@@ -113,7 +114,6 @@
 	PYTHON = "nix-shell -p python312 python312Packages.numpy python312Packages.scipy python312Packages.matplotlib python312Packages.sympy python312Packages.pandas --command \"python\"";
 
 	# nonNixPrograms
-        matlab = "nix-shell /home/cameron/nonNixBin/matlab-symbolicMathToolbox/matlab.nix";
         thinlinc = "nix-shell /home/cameron/nonNixBin/thinlinc/thinlinc.nix";
 
 	# ssh shortuts

@@ -2,7 +2,10 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+flake-overlays:
+
+{ config, pkgs, options, lib, ... }:
+
 
 let
   pinnedZoomPkgs =
@@ -22,7 +25,7 @@ in
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    ./hardware-configuration.nix
     ];
 
   # Bootloader.
@@ -97,6 +100,15 @@ in
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+  
+  
+  nixpkgs.overlays = [
+    (
+      final: prev: {
+        # Your own overlays here if needed
+      }
+    )
+  ] ++ flake-overlays;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cameron = {
@@ -150,6 +162,7 @@ in
     vim
     syncthing
     python312
+    matlab
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
