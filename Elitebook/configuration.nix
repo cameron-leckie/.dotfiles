@@ -63,6 +63,8 @@ in
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  # Enable onedrive
+  services.onedrive.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
@@ -136,10 +138,12 @@ in
       discord
     ];
   };
-
+  
+  # steam stuff
   programs = { 
-  # can enable programs
-  # firefox.enable = true;
+    steam.enable = true;
+    steam.gamescopeSession.enable = true;
+    gamemode.enable = true;
   };
 
   # Allow unfree, unsupported and insecure packages
@@ -163,7 +167,16 @@ in
     syncthing
     python312
     matlab
+    protonup
+    mangohud
+    proton-pass
+    protonvpn-gui
   ];
+
+  environment.sessionVariables = { STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+    "/home/user/.steam/root/compatibilitytools.d";
+  };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
