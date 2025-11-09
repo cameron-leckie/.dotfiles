@@ -165,8 +165,17 @@ in
     neovim
     vim
     syncthing
-    python312
+    # Coding
+    python313
+    python313Packages.matplotlib
+    python313Packages.numpy
+    python313Packages.scipy
+    python313Packages.pandas
+    gcc
+
     matlab
+
+    # Steam
     protonup
     mangohud
     proton-pass
