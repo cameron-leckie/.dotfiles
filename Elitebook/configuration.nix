@@ -172,6 +172,7 @@ in
     python313Packages.scipy
     python313Packages.pandas
     gcc
+    gnumake
     entr
 
     matlab
