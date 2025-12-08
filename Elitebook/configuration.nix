@@ -31,6 +31,7 @@ in
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.configurationLimit = 10;
 
   networking.hostName = "CL-Elitebook"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -64,7 +65,7 @@ in
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   # Enable onedrive
-  #services.onedrive.enable = true;
+  services.onedrive.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
@@ -178,7 +179,7 @@ in
     matlab
 
     # Steam
-    protonup
+    protonup-ng
     mangohud
     proton-pass
     protonvpn-gui
