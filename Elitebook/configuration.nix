@@ -65,12 +65,14 @@ in
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   # Enable onedrive
-  services.onedrive.enable = true;
+  #services.onedrive.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   #  services.desktopManager.plasma5.enable = true;
   services.desktopManager.plasma6.enable = true;
+
+  
 
 
   # Configure keymap in X11
@@ -147,6 +149,8 @@ in
     gamemode.enable = true;
   };
 
+  programs.hyprland.enable = true;
+
   # Allow unfree, unsupported and insecure packages
   nixpkgs.config.allowUnfree = true;
   # nixpkgs.config.allowUnsupportedSystem = true;
@@ -173,6 +177,9 @@ in
     python313Packages.scipy
     python313Packages.pandas
     gcc
+    gfortran
+    rustc
+    cargo
     gnumake
     entr
 
@@ -181,9 +188,24 @@ in
     # Steam
     protonup-ng
     mangohud
+
+    # Proton
     proton-pass
     protonvpn-gui
+    
+    # Hyprland
+    waybar
+    #((waybar.overrideAttrs (oldAttrs: {mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];}))
+    dunst
+    libnotify
+    swww
+    kitty
+    wofi
+    networkmanagerapplet
   ];
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   environment.sessionVariables = { STEAM_EXTRA_COMPAT_TOOLS_PATHS =
     "/home/user/.steam/root/compatibilitytools.d";
