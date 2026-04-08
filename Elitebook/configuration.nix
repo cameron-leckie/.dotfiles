@@ -192,6 +192,7 @@ in
     # Proton
     proton-pass
     protonvpn-gui
+    rclone
     
     # Hyprland
     waybar
